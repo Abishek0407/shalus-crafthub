@@ -25,6 +25,11 @@ export default function Navbar() {
           <img src={logo} alt="Shalu'z CraftHub" />
         </Link>
 
+        {/* Centered brand name, mobile only — desktop shows the full link list instead */}
+        <Link to="/" className="navbar-brand mobile-only" aria-label="Shalu'z CraftHub">
+          Shalu'z CraftHub
+        </Link>
+
         <nav className="navbar-links desktop-only">
           {links.map((l) => (
             <NavLink
