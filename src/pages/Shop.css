@@ -1,0 +1,8 @@
+.shop-header { text-align: center; padding: 60px 24px 20px; }
+.shop-header h1 { font-family: 'Fraunces', serif; font-size: clamp(2rem, 5vw, 3rem); color: #2E2B26; margin: 0 0 10px; }
+.shop-header p { color: #6a655d; font-size: 15px; margin: 0; }
+.shop-grid-section { padding: 40px 24px 120px; max-width: 1240px; margin: 0 auto; }
+.shop-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 40px 28px; }
+
+@media (min-width: 640px) { .shop-grid { grid-template-columns: repeat(3, 1fr); gap: 48px 32px; } }
+@media (min-width: 1024px) { .shop-grid { grid-template-columns: repeat(4, 1fr); gap: 56px 32px; } }

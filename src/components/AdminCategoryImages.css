@@ -1,0 +1,84 @@
+.admin-image-manager {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 50px 24px 100px;
+}
+.admin-login-page { min-height: 55vh; display: grid; place-items: center; }
+.admin-login { width: min(100%, 380px); padding: 32px; background: #fff; border: 1px solid rgba(46, 43, 38, 0.1); border-radius: 10px; box-sizing: border-box; }
+.admin-login h1 { font-family: "Fraunces", serif; font-weight: 500; font-size: 1.8rem; color: #2E2B26; margin: 0 0 8px; }
+.admin-login p { font-family: "Jost", sans-serif; font-size: 13.5px; color: #6a655d; margin: 0 0 22px; }
+.admin-login-field { display: grid; gap: 5px; font-family: "Jost", sans-serif; font-size: 12px; color: #6a655d; }
+.admin-login-field input { width: 100%; box-sizing: border-box; padding: 10px; border: 1px solid rgba(46, 43, 38, 0.16); border-radius: 5px; font: inherit; color: #2E2B26; background: #fff; }
+.admin-login-field input:focus { outline: 2px solid rgba(107, 122, 110, 0.35); outline-offset: 1px; }
+.admin-login-error { color: #b3453a !important; margin: 8px 0 14px !important; }
+.admin-login-btn { width: 100%; border: 0; border-radius: 5px; padding: 10px 14px; background: #6B7A6E; color: #FBF4EF; font-family: "Jost", sans-serif; font-size: 13px; cursor: pointer; }
+.admin-login-btn:hover { background: #59685c; }
+.admin-image-manager-header { margin-bottom: 32px; }
+.admin-image-manager-header h1 { font-family: "Fraunces", serif; font-weight: 500; font-size: clamp(1.6rem, 3.5vw, 2.2rem); color: #2E2B26; margin: 0 0 10px; }
+.admin-note { font-family: "Jost", sans-serif; font-size: 13.5px; line-height: 1.6; color: #6a655d; background: #F3E9E1; border: 1px solid rgba(46, 43, 38, 0.08); border-radius: 8px; padding: 12px 16px; margin: 0; }
+.admin-category-block { border: 1px solid rgba(46, 43, 38, 0.1); border-radius: 10px; margin-bottom: 14px; overflow: hidden; background: #fff; }
+.admin-category-toggle { width: 100%; display: flex; align-items: center; justify-content: space-between; padding: 16px 20px; background: none; border: none; cursor: pointer; font-family: "Fraunces", serif; font-size: 17px; color: #2E2B26; text-align: left; }
+.admin-toggle-icon { font-size: 20px; color: #C6A15B; }
+.admin-category-body { padding: 4px 20px 20px; border-top: 1px solid rgba(46, 43, 38, 0.08); }
+.admin-detail-fields { display: grid; gap: 12px; padding: 16px 0 4px; }
+.admin-detail-field { display: grid; gap: 5px; font-family: "Jost", sans-serif; font-size: 12px; color: #6a655d; }
+.admin-detail-field input { width: 100%; box-sizing: border-box; padding: 9px 10px; border: 1px solid rgba(46, 43, 38, 0.16); border-radius: 5px; font: inherit; color: #2E2B26; background: #fff; }
+.admin-detail-field input:focus { outline: 2px solid rgba(107, 122, 110, 0.35); outline-offset: 1px; }
+.admin-product-block { padding-top: 8px; }
+.admin-group-block { margin-top: 24px; padding-top: 18px; border-top: 1px dashed rgba(46, 43, 38, 0.12); }
+.admin-group-block h3 { font-family: "Fraunces", serif; font-size: 15px; color: #2E2B26; margin: 0 0 12px; }
+.admin-image-row { display: flex; gap: 14px; align-items: center; padding: 10px 0; }
+.admin-image-preview { width: 64px; height: 80px; object-fit: cover; border-radius: 6px; flex-shrink: 0; background: #f0ebe4; }
+.admin-image-info { flex: 1; min-width: 0; }
+.admin-image-label { font-family: "Jost", sans-serif; font-size: 13.5px; color: #2E2B26; margin: 0 0 6px; }
+.admin-image-actions { display: flex; gap: 10px; flex-wrap: wrap; }
+.admin-upload-btn, .admin-reset-btn { font-family: "Jost", sans-serif; font-size: 12.5px; padding: 7px 14px; border-radius: 20px; cursor: pointer; }
+.admin-upload-btn { background: #6B7A6E; color: #FBF4EF; }
+.admin-upload-btn:hover { background: #59685c; }
+.admin-reset-btn { background: none; border: 1px solid rgba(46, 43, 38, 0.2); color: #6a655d; }
+.admin-reset-btn:hover { border-color: #2E2B26; color: #2E2B26; }
+.admin-image-error { font-family: "Jost", sans-serif; font-size: 12px; color: #b3453a; margin: 6px 0 0; }
+.admin-image-hint { font-family: "Jost", sans-serif; font-size: 11.5px; color: #a89f92; margin: 6px 0 0; }
+@media (max-width: 520px) { .admin-image-row { align-items: flex-start; } .admin-image-actions { flex-direction: column; align-items: flex-start; } }
+
+/* New Product Addition Styles */
+.admin-products-section { margin-top: 16px; }
+.admin-section-title { font-family: "Fraunces", serif; font-size: 14px; color: #2E2B26; margin: 12px 0 10px; font-weight: 500; }
+
+.admin-new-products-section { margin-top: 20px; padding-top: 14px; border-top: 1px dashed rgba(46, 43, 38, 0.12); background: rgba(251, 244, 239, 0.4); padding: 14px; border-radius: 6px; }
+
+.admin-new-product-block { background: #fff; border: 1px dashed #d4a574; border-radius: 6px; padding: 12px; margin-bottom: 10px; position: relative; }
+.admin-new-product-block:last-child { margin-bottom: 0; }
+
+.admin-product-header { display: flex; justify-content: space-between; align-items: center; gap: 10px; margin-bottom: 8px; }
+.admin-product-header h5 { font-family: "Fraunces", serif; font-size: 13.5px; color: #2E2B26; margin: 0; }
+
+.admin-remove-product-btn { width: 28px; height: 28px; display: flex; align-items: center; justify-content: center; border: 1px solid rgba(179, 69, 58, 0.2); background: rgba(179, 69, 58, 0.08); color: #b3453a; border-radius: 4px; cursor: pointer; flex-shrink: 0; }
+.admin-remove-product-btn:hover { background: rgba(179, 69, 58, 0.15); border-color: #b3453a; }
+
+.admin-new-product-preview { width: 100%; height: 120px; object-fit: cover; border-radius: 4px; margin-bottom: 8px; }
+.admin-new-product-hint { font-family: "Jost", sans-serif; font-size: 11.5px; color: #a89f92; margin: 0; }
+
+/* Add Product Form Styles */
+.admin-add-product-btn { width: 100%; margin-top: 12px; display: flex; align-items: center; justify-content: center; gap: 8px; padding: 10px 14px; border: 1px dashed #d4a574; background: rgba(212, 165, 116, 0.08); color: #d4a574; border-radius: 6px; font-family: "Jost", sans-serif; font-size: 13px; cursor: pointer; transition: all 0.2s ease; }
+.admin-add-product-btn:hover { background: rgba(212, 165, 116, 0.12); }
+
+.admin-add-product-form { background: #fff; border: 2px solid #d4a574; border-radius: 8px; padding: 16px; margin-top: 12px; }
+.admin-form-title { font-family: "Fraunces", serif; font-size: 14px; color: #2E2B26; margin: 0 0 12px; font-weight: 500; }
+.admin-form-fields { display: grid; gap: 12px; margin-bottom: 12px; }
+.admin-form-field { display: grid; gap: 5px; font-family: "Jost", sans-serif; font-size: 12px; color: #6a655d; }
+.admin-form-field input { width: 100%; box-sizing: border-box; padding: 9px 10px; border: 1px solid rgba(46, 43, 38, 0.16); border-radius: 5px; font: inherit; color: #2E2B26; background: #fff; }
+.admin-form-field input:focus { outline: 2px solid rgba(212, 165, 116, 0.35); outline-offset: 1px; }
+.admin-form-field input:disabled { background: #f5f1e8; }
+
+.admin-form-error { font-family: "Jost", sans-serif; font-size: 12px; color: #b3453a; margin: 0 0 10px; padding: 8px 10px; background: rgba(179, 69, 58, 0.08); border-radius: 4px; }
+
+.admin-form-actions { display: flex; gap: 10px; justify-content: flex-end; }
+.admin-add-btn { padding: 9px 20px; border: none; background: #d4a574; color: white; border-radius: 5px; font-family: "Jost", sans-serif; font-size: 12.5px; cursor: pointer; font-weight: 500; }
+.admin-add-btn:hover:not(:disabled) { background: #c9906e; }
+.admin-add-btn:disabled { opacity: 0.6; cursor: not-allowed; }
+
+.admin-cancel-btn { padding: 9px 20px; border: 1px solid rgba(46, 43, 38, 0.2); background: transparent; color: #6a655d; border-radius: 5px; font-family: "Jost", sans-serif; font-size: 12.5px; cursor: pointer; }
+.admin-cancel-btn:hover:not(:disabled) { border-color: #2E2B26; color: #2E2B26; }
+.admin-cancel-btn:disabled { opacity: 0.6; cursor: not-allowed; }
+

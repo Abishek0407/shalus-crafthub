@@ -1,0 +1,19 @@
+.stub-page {
+  min-height: 50vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 100px 24px;
+}
+.stub-page h1 { font-family: 'Fraunces', serif; font-size: clamp(1.8rem, 4vw, 2.6rem); color: #2E2B26; margin: 0 0 12px; }
+.stub-page p { color: #6a655d; max-width: 46ch; margin: 0 0 20px; }
+.stub-badge {
+  font-size: 12px;
+  letter-spacing: 0.04em;
+  color: #6B7A6E;
+  border: 1px solid #6B7A6E;
+  padding: 6px 14px;
+  border-radius: 999px;
+}

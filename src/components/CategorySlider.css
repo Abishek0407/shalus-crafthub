@@ -1,0 +1,118 @@
+.slider-stage {
+  position: relative;
+  min-height: 76vh;
+  background: #2E2B26;
+  color: #FBF4EF;
+  border-radius: 10px;
+  overflow: hidden;
+  padding: 56px 20px 44px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 34px;
+}
+
+.slider-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  width: 100%;
+}
+
+.slide-thumb {
+  flex-shrink: 0;
+  width: 64px;
+  aspect-ratio: 4 / 5;
+  border-radius: 6px;
+  overflow: hidden;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  opacity: 0.4;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+.slide-thumb:hover { opacity: 0.8; transform: scale(1.05); }
+.slide-thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+.slide-frame-link { display: block; text-decoration: none; }
+.slide-frame {
+  position: relative;
+  width: min(320px, 62vw);
+  aspect-ratio: 4 / 5;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 30px 60px -22px rgba(0, 0, 0, 0.6);
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+  will-change: clip-path, transform;
+}
+.slide-frame img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.slide-frame-cta {
+  position: absolute;
+  left: 16px;
+  right: 16px;
+  bottom: 14px;
+  font-family: "Jost", sans-serif;
+  font-size: 13px;
+  letter-spacing: 0.03em;
+  color: #FBF4EF;
+  opacity: 0;
+  transform: translateY(6px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+.slide-frame-link:hover .slide-frame-cta { opacity: 1; transform: translateY(0); }
+
+.slider-meta { text-align: center; max-width: 560px; }
+.slider-eyebrow {
+  font-family: "Jost", sans-serif;
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #C6A15B;
+  margin: 0 0 8px;
+}
+.slider-title {
+  font-family: "Fraunces", serif;
+  font-weight: 500;
+  font-size: clamp(1.6rem, 4vw, 2.6rem);
+  margin: 0 0 10px;
+  overflow: hidden;
+}
+.slider-title .letter { display: inline-block; will-change: transform, opacity; }
+.slider-counter {
+  font-family: "Jost", sans-serif;
+  font-size: 13px;
+  letter-spacing: 0.06em;
+  color: #ead1ce;
+  margin: 0;
+}
+
+.slider-jumplist {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px 14px;
+  max-width: 720px;
+}
+.jump-chip {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: "Jost", sans-serif;
+  font-size: 12px;
+  letter-spacing: 0.02em;
+  color: #a89f92;
+  padding: 4px 2px;
+  border-bottom: 1px solid transparent;
+  transition: color 0.25s ease, border-color 0.25s ease;
+}
+.jump-chip:hover { color: #FBF4EF; }
+.jump-chip.is-active { color: #FBF4EF; border-color: #C6A15B; }
+
+@media (min-width: 768px) {
+  .slider-stage { min-height: 82vh; padding: 70px 40px 56px; }
+  .slide-thumb { width: 130px; }
+  .slide-frame { width: min(420px, 40vw); }
+  .slider-row { gap: 30px; }
+}
