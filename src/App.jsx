@@ -1,5 +1,5 @@
 import { useLayoutEffect } from "react";
-import { Navigate, Routes, Route, useLocation } from "react-router-dom";
+import { Navigate, Routes, Route, useLocation, useNavigationType } from "react-router-dom";
 import Home from "./pages/Home";
 import Shop from "./pages/Shop";
 import CategoryPage from "./pages/CategoryPage";
@@ -11,12 +11,20 @@ import ContactFloat from "./components/ContactFloat";
 import StubPage from "./pages/StubPage";
 import Highlights from "./components/Highlights";
 
-function ScrollToTop() {
-  const { pathname } = useLocation();
+const scrollPositions = new Map();
+
+function ScrollRestoration() {
+  const location = useLocation();
+  const navigationType = useNavigationType();
 
   useLayoutEffect(() => {
-    window.scrollTo(0, 0);
-  }, [pathname]);
+    const savedPosition = scrollPositions.get(location.key);
+    window.scrollTo(0, navigationType === "POP" ? savedPosition ?? 0 : 0);
+
+    return () => {
+      scrollPositions.set(location.key, window.scrollY);
+    };
+  }, [location.key, navigationType]);
 
   return null;
 }
@@ -24,7 +32,7 @@ function ScrollToTop() {
 export default function App() {
   return (
     <>
-      <ScrollToTop />
+      <ScrollRestoration />
       <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/shop" element={<Shop />} />

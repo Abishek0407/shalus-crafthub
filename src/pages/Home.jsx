@@ -15,11 +15,16 @@ import "./Home.css";
 
 gsap.registerPlugin(ScrollTrigger);
 
+let hasCompletedHomeCurtain = false;
+
 export default function Home() {
-  const [curtainDone, setCurtainDone] = useState(false);
+  const [curtainDone, setCurtainDone] = useState(hasCompletedHomeCurtain);
   const rootRef = useRef(null);
   useOverrideVersion();
-  const handleCurtainDone = useCallback(() => setCurtainDone(true), []);
+  const handleCurtainDone = useCallback(() => {
+    hasCompletedHomeCurtain = true;
+    setCurtainDone(true);
+  }, []);
   const visibleCategories = categories.map(applyCategoryOverrides);
 
   useEffect(() => {
@@ -68,7 +73,7 @@ export default function Home() {
         <span className="bg-blob blob-gold" />
       </div>
 
-      <Curtain onDone={handleCurtainDone} />
+      {!curtainDone && <Curtain onDone={handleCurtainDone} />}
       <Navbar />
       <LandingStage />
 
