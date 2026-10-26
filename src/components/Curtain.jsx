@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState, useCallback } from "react";
 import gsap from "gsap";
-import logo from "../assets/logo.jpg";
+import logo from "../assets/logo.png";
 import "./Curtain.css";
 
 // Tap-to-open curtain intro (wedding-invitation style): two door panels
