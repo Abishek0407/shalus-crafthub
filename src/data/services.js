@@ -232,6 +232,25 @@ export const categories = [
     tagline: "A family tree, made of thumbprints",
     image: customisedGiftsImg,
     items: [{ group: "Customised Gifts", image: customisedGiftsImg, products: [] }]
+  },
+  {
+    slug: "keychain",
+    name: "Keychain",
+    tagline: "Personalised keepsakes to carry every day",
+    image: keychainsImg,
+    items: [
+      {
+        group: "Keychains",
+        image: keychainsImg,
+        products: [
+          { name: "Photo Keychain", image: photoKeychainImg },
+          { name: "Letter Keychain", image: letterKeychainImg },
+          "Name Keychain",
+          { name: "Shaker Keychain", image: shakerKeychainImg },
+          "Glow in the Dark Keychain"
+        ]
+      }
+    ]
   }
 ];
 
