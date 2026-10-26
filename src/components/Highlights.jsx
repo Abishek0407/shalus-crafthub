@@ -3,10 +3,8 @@ import Navbar from "./Navbar";
 import Footer from "./Footer";
 import "./Highlights.css";
 
-// Vite: automatically pulls in every image dropped into src/assets/highlights-IMG.
-// Add or remove files from that folder and this page updates on the next build —
-// no need to import/list each one by hand.
-const modules = import.meta.glob("../assets/highlights-IMG/*.{png,jpg,jpeg,webp,PNG,JPG,JPEG}", {
+// Use the existing craft photos for the highlights gallery.
+const modules = import.meta.glob("../assets/categories/*.{png,jpg,jpeg,webp,PNG,JPG,JPEG}", {
   eager: true,
   import: "default"
 });
@@ -31,7 +29,7 @@ export default function Highlights() {
         </div>
 
         {highlightImages.length === 0 ? (
-          <p className="highlights-empty">No highlight photos yet. Add images to the highlights-IMG folder.</p>
+          <p className="highlights-empty">No highlight photos are available yet.</p>
         ) : (
           <div className="highlights-grid">
             {highlightImages.map((image) => (

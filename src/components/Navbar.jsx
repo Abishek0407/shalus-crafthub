@@ -1,13 +1,14 @@
 import { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
-import { Menu, X, User } from "lucide-react";
-import logo from "../assets/logo.png";
+import { Menu, X, ShoppingBag, User } from "lucide-react";
+import logo from "../assets/logo.jpg";
 import "./Navbar.css";
 
 const links = [
   { to: "/", label: "Home" },
   { to: "/shop", label: "Shop" },
   { to: "/gallery", label: "Gallery" },
+  { to: "/highlights", label: "Highlights" },
   { to: "/about", label: "Our Story" },
   { to: "/contact", label: "Contact" },
   { to: "/admin/images", label: "Manage photos" }
