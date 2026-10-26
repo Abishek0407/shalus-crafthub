@@ -3,8 +3,8 @@ import Navbar from "./Navbar";
 import Footer from "./Footer";
 import "./Highlights.css";
 
-// Use the existing craft photos for the highlights gallery.
-const modules = import.meta.glob("../assets/categories/*.{png,jpg,jpeg,webp,PNG,JPG,JPEG}", {
+// Load only the images dedicated to the highlights gallery.
+const modules = import.meta.glob("../assets/Highlights-IMG/*.{png,jpg,jpeg,webp,PNG,JPG,JPEG}", {
   eager: true,
   import: "default"
 });
