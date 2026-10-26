@@ -7,7 +7,7 @@ import { useOverrideVersion } from "../utils/useOverrideVersion";
 import "./GallerySphere.css";
 
 gsap.registerPlugin(ScrollTrigger);
-const whatsappUrl = "https://wa.me/917639868486";
+const whatsappUrl = "https://wa.me/917639858486";
 
 export default function GallerySphere() {
   const sceneRef = useRef(null);

@@ -4,7 +4,7 @@ import Footer from "../components/Footer";
 import "./Contact.css";
 
 const instagramUrl = "https://www.instagram.com/shaluz_crafthub?igsi=MTZyeTJnd2Iyam4wYQ==";
-const whatsappUrl = "https://wa.me/917639868486";
+const whatsappUrl = "https://wa.me/917639858486";
 
 export default function Contact() {
   return (

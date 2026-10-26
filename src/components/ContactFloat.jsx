@@ -3,8 +3,8 @@ import { Camera, MessageCircle, Phone, X } from "lucide-react";
 import "./ContactFloat.css";
 
 const instagramUrl = "https://www.instagram.com/shaluz_crafthub?igsi=MTZyeTJnd2Iyam4wYQ==";
-const whatsappUrl = "https://wa.me/917639868486";
-const phoneUrl = "tel:+917639868486";
+const whatsappUrl = "https://wa.me/917639858486";
+const phoneUrl = "tel:+917639858486";
 
 export default function ContactFloat() {
   const [open, setOpen] = useState(false);
