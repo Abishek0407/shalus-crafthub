@@ -3,7 +3,6 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import CategoryCard from "../components/CategoryCard";
 import { categories } from "../data/services";
 import CategoryCube from "../components/CategoryCube";
 import { applyCategoryOverrides } from "../utils/imageOverrides";

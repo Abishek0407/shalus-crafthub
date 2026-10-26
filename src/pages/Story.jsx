@@ -185,10 +185,6 @@ export default function Story() {
           <p className="cta-subtitle">
             Come, let's hold onto the beauty of memories and create something timeless together.
           </p>
-          <div className="cta-buttons">
-            <a href="/shop" className="btn-primary">Explore Our Crafts</a>
-            <a href="/contact" className="btn-secondary">Get In Touch</a>
-          </div>
         </div>
       </section>
 
