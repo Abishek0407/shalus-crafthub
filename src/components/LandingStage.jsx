@@ -44,6 +44,8 @@ export default function LandingStage() {
   const handleClick = useCallback((e) => {
     const rect = stageRef.current.getBoundingClientRect();
     const src = GALLERY[Math.floor(Math.random() * GALLERY.length)];
+    const pointerX = e.clientX ?? rect.left + rect.width / 2;
+    const pointerY = e.clientY ?? rect.top + rect.height / 2;
 
     const el = document.createElement("div");
     el.className = "stage-item";
@@ -51,8 +53,8 @@ export default function LandingStage() {
     stageRef.current.appendChild(el);
 
     const width = 260;
-    el.style.left = `${e.clientX - rect.left - width / 2}px`;
-    el.style.top = `${e.clientY - rect.top}px`;
+    el.style.left = `${pointerX - rect.left - width / 2}px`;
+    el.style.top = `${pointerY - rect.top}px`;
 
     const randomRotation = Math.random() * 10 - 5;
     const randomScale = Math.random() * 0.35 + 0.65;
@@ -70,15 +72,26 @@ export default function LandingStage() {
       .to(el, { opacity: 0, duration: 0.9 }, "-=0.6");
   }, []);
 
+  const handleKeyDown = useCallback((e) => {
+    if ((e.key === "Enter" || e.key === " ") && !e.repeat) {
+      e.preventDefault();
+      handleClick(e);
+    }
+  }, [handleClick]);
+
   return (
     <section
       ref={stageRef}
       className="landing-stage"
+      role="button"
+      tabIndex={0}
+      aria-label="Reveal a floating craft photo"
       style={{ backgroundImage: `url(${landingBg})` }}
       onMouseMove={handleMouseMove}
       onMouseEnter={() => setActive(true)}
       onMouseLeave={() => setActive(false)}
       onClick={handleClick}
+      onKeyDown={handleKeyDown}
     >
       <div className="stage-scrim" aria-hidden="true" />
 
