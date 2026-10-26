@@ -36,7 +36,7 @@ export default function Home() {
             opacity: 1,
             duration: 0.8,
             ease: "power3.out",
-            delay: parseFloat(el.style.getPropertyValue("--delay")) || 0,
+            delay: Number.parseFloat(el.style.getPropertyValue("--delay")) || 0,
             scrollTrigger: {
               trigger: el,
               start: "top 88%"
