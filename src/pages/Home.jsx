@@ -107,11 +107,7 @@ export default function Home() {
 
       <GallerySphere />
 
-      <section className="cta-strip reveal-up">
-        <h2>Have something specific in mind?</h2>
-        <p>Send us a photo and we'll turn it into a keepsake.</p>
-        <a href={whatsappUrl} target="_blank" rel="noreferrer" className="btn-primary">Start a custom order</a>
-      </section>
+    
 
       <Footer />
     </div>

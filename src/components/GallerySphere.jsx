@@ -233,7 +233,7 @@ export default function GallerySphere() {
       <section className="craft-gallery journey-section">
         <div className="constellation" ref={constellationRef} />
         <div className="journey-content">
-          <h2>Start your custom order</h2>
+          <h2>Have something specific in mind?</h2>
           <p>Send us a photo and we'll turn it into a keepsake.</p>
           <a href={whatsappUrl} target="_blank" rel="noreferrer" className="btn chunky-btn large-btn">Get started</a>
         </div>
