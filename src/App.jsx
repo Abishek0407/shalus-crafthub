@@ -1,4 +1,5 @@
-import { Navigate, Routes, Route } from "react-router-dom";
+import { useLayoutEffect } from "react";
+import { Navigate, Routes, Route, useLocation } from "react-router-dom";
 import Home from "./pages/Home";
 import Shop from "./pages/Shop";
 import CategoryPage from "./pages/CategoryPage";
@@ -10,9 +11,20 @@ import ContactFloat from "./components/ContactFloat";
 import StubPage from "./pages/StubPage";
 import Highlights from "./components/Highlights";
 
+function ScrollToTop() {
+  const { pathname } = useLocation();
+
+  useLayoutEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  return null;
+}
+
 export default function App() {
   return (
     <>
+      <ScrollToTop />
       <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/shop" element={<Shop />} />
