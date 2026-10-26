@@ -5,7 +5,7 @@ import { applyCategoryOverrides, getOverride } from "../utils/imageOverrides";
 import { useOverrideVersion } from "../utils/useOverrideVersion";
 import "./ImageRing.css";
 
-const MAX_RING_ITEMS = 12;
+const MAX_RING_ITEMS = 10;
 
 // 3D rotating ring, adapted from a CSS-only reference into React + GSAP.
 // Pulls real product photos from the catalog where available; falls back

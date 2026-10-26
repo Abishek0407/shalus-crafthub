@@ -74,19 +74,6 @@
   align-items: center;
   gap: 14px;
 }
-.icon-btn-blink {
-  animation: navIconBlink 1.4s ease-in-out infinite;
-}
- 
-@keyframes navIconBlink {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0.25; }
-}
- 
-.icon-btn-blink:hover {
-  animation: none;
-  opacity: 1;
-}
 .icon-btn {
   display: inline-flex;
   align-items: center;
@@ -125,4 +112,19 @@
 @media (min-width: 900px) {
   .desktop-only { display: inline-flex; }
   .mobile-only { display: none; }
+}
+
+@media (max-width: 768px) {
+  .navbar-menu-toggle {
+    animation: menu-blink 1.6s ease-in-out infinite;
+  }
+
+  .navbar-menu-toggle[aria-expanded="true"] {
+    animation: none;
+  }
+}
+
+@keyframes menu-blink {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.35; transform: scale(1.12); }
 }

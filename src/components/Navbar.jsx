@@ -44,15 +44,16 @@ export default function Navbar() {
         </nav>
 
         <div className="navbar-actions">
-          <Link to="/account" className="icon-btn desktop-only icon-btn-blink" aria-label="Account">
+          <Link to="/account" className="icon-btn desktop-only" aria-label="Account">
             <User size={19} strokeWidth={1.6} />
           </Link>
           {/* <Link to="/cart" className="icon-btn" aria-label="Cart">
             <ShoppingBag size={19} strokeWidth={1.6} />
           </Link> */}
           <button
-            className="icon-btn mobile-only"
+            className="icon-btn mobile-only navbar-menu-toggle"
             aria-label={open ? "Close menu" : "Open menu"}
+            aria-expanded={open}
             onClick={() => setOpen((v) => !v)}
           >
             {open ? <X size={22} strokeWidth={1.6} /> : <Menu size={22} strokeWidth={1.6} />}
