@@ -14,7 +14,7 @@
 
 .ring {
   --width: 130px;
-  --img-translate-x: 140%;
+  --img-translate-x: 175%;
   position: relative;
   width: var(--width);
   aspect-ratio: 3/4;
@@ -53,10 +53,10 @@
 }
 
 @media (min-width: 640px) {
-  .ring { --width: 190px; --img-translate-x: 150%; }
+  .ring { --width: 190px; --img-translate-x: 187.5%; }
   .ring-item-label { font-size: 13px; }
 }
 
 @media (min-width: 1024px) {
-  .ring { --width: 240px; --img-translate-x: 160%; }
+  .ring { --width: 240px; --img-translate-x: 200%; }
 }
