@@ -9,14 +9,19 @@ const PARALLAX_STRENGTH = 16;
 export default function ProductCube({ image, title, subtitle, index = 0, overrideParts = [] }) {
   const wrapperRef = useRef(null);
   const cubeRef = useRef(null);
-  const [canHover, setCanHover] = useState(false);
+  const [canHover, setCanHover] = useState(
+    () => window.matchMedia("(hover: hover) and (pointer: fine)").matches
+  );
   useOverrideVersion();
   const productOverride = overrideParts.length ? getOverride("product", ...overrideParts) : null;
   const groupOverride = overrideParts.length > 1 ? getOverride("group", overrideParts[0], overrideParts[1]) : null;
   const src = productOverride || groupOverride || image || `https://picsum.photos/seed/${encodeURIComponent(title)}/500/620`;
 
   useEffect(() => {
-    setCanHover(window.matchMedia("(hover: hover) and (pointer: fine)").matches);
+    const mediaQuery = window.matchMedia("(hover: hover) and (pointer: fine)");
+    const updateHoverCapability = () => setCanHover(mediaQuery.matches);
+    mediaQuery.addEventListener("change", updateHoverCapability);
+    return () => mediaQuery.removeEventListener("change", updateHoverCapability);
   }, []);
 
   useEffect(() => {

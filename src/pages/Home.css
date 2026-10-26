@@ -90,9 +90,10 @@
   text-decoration: none;
   letter-spacing: 0.02em;
   display: inline-block;
+  background: #59685c;
+  color: #FBF4EF;
 }
-.btn-primary { background: #6B7A6E; color: #FBF4EF; }
-.btn-primary:hover { background: #59685c; }
+.btn-primary:hover { background: #465449; }
 
 .ring-section { position: relative; z-index: 1; text-align: center; padding: 20px 24px 10px; }
 .ring-section h2 {

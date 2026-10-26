@@ -60,7 +60,7 @@ export default function CategorySlider({ slides }) {
       .to(frameRef.current, { clipPath: CLOSED, scale: 0.92, duration: 0.42 }, 0)
       .to(counterRef.current, { yPercent: -100, opacity: 0, duration: 0.28 }, 0);
     return () => tl.kill();
-  }, [phase]);
+  }, [phase, index, total]);
 
   useEffect(() => {
     if (phase !== "entering") return;

@@ -10,12 +10,17 @@ const PARALLAX_STRENGTH = 16;
 export default function CategoryCube({ category, index }) {
   const wrapperRef = useRef(null);
   const cubeRef = useRef(null);
-  const [canHover, setCanHover] = useState(false);
+  const [canHover, setCanHover] = useState(
+    () => window.matchMedia("(hover: hover) and (pointer: fine)").matches
+  );
   useOverrideVersion();
   const src = getOverride("category", category.slug) || category.image || `https://picsum.photos/seed/${category.slug}/700/900`;
 
   useEffect(() => {
-    setCanHover(window.matchMedia("(hover: hover) and (pointer: fine)").matches);
+    const mediaQuery = window.matchMedia("(hover: hover) and (pointer: fine)");
+    const updateHoverCapability = () => setCanHover(mediaQuery.matches);
+    mediaQuery.addEventListener("change", updateHoverCapability);
+    return () => mediaQuery.removeEventListener("change", updateHoverCapability);
   }, []);
 
   useEffect(() => {

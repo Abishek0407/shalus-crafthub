@@ -14,7 +14,6 @@ import { useOverrideVersion } from "../utils/useOverrideVersion";
 import "./Home.css";
 
 gsap.registerPlugin(ScrollTrigger);
-const whatsappUrl = "https://wa.me/917639868486";
 
 export default function Home() {
   const [curtainDone, setCurtainDone] = useState(false);
@@ -106,8 +105,6 @@ export default function Home() {
       </section>
 
       <GallerySphere />
-
-    
 
       <Footer />
     </div>

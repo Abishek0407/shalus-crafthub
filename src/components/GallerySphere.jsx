@@ -1,5 +1,4 @@
 import { useEffect, useMemo, useRef } from "react";
-import { Link } from "react-router-dom";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { categories, extraRingImages } from "../data/services";
@@ -16,7 +15,7 @@ export default function GallerySphere() {
   const titleRef = useRef(null);
   const descRef = useRef(null);
   const constellationRef = useRef(null);
-  const overrideVersion = useOverrideVersion();
+  useOverrideVersion();
   const visibleCategories = categories.map(applyCategoryOverrides);
 
   const galleryItems = useMemo(() => {
@@ -33,7 +32,7 @@ export default function GallerySphere() {
       desc: "A closer look at the craft"
     }));
     return [...fromCategories, ...fromExtras];
-  }, [overrideVersion, visibleCategories]);
+  }, [visibleCategories]);
 
   const allGalleryItems = useMemo(() => {
     const items = [];
@@ -66,7 +65,7 @@ export default function GallerySphere() {
     });
 
     return items;
-  }, [overrideVersion, visibleCategories]);
+  }, [visibleCategories]);
 
   // Sphere of cards + scroll-driven rotation / text swap
   useEffect(() => {
@@ -209,7 +208,7 @@ export default function GallerySphere() {
         <div className="scene" ref={sceneRef}>
           <div className="sphere" ref={sphereRef} />
         </div>
-        <svg className="network-lines" viewBox="0 0 100 100" preserveAspectRatio="none">
+        <svg className="network-lines" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
           <path d="M0,50 Q25,30 50,50 T100,50" stroke="rgba(107,122,110,0.12)" strokeWidth="0.2" fill="none" />
           <path d="M20,0 L80,100" stroke="rgba(198,161,91,0.1)" strokeWidth="0.2" fill="none" />
         </svg>
