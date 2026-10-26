@@ -5,6 +5,8 @@ import { applyCategoryOverrides, getOverride } from "../utils/imageOverrides";
 import { useOverrideVersion } from "../utils/useOverrideVersion";
 import "./ImageRing.css";
 
+const MAX_RING_ITEMS = 12;
+
 // 3D rotating ring, adapted from a CSS-only reference into React + GSAP.
 // Pulls real product photos from the catalog where available; falls back
 // to a placeholder only for categories that don't have a photo yet.
@@ -12,13 +14,14 @@ export default function ImageRing() {
   const ringRef = useRef(null);
   const tweenRef = useRef(null);
   const overrideVersion = useOverrideVersion();
-  const ringItems = [
-    ...categories
-      .map(applyCategoryOverrides)
-      .filter((category) => category.image)
-      .map((category) => ({ label: category.name, img: getOverride("category", category.slug) || category.image })),
-    ...extraRingImages
-  ];
+  const categoryItems = categories
+    .map(applyCategoryOverrides)
+    .filter((category) => category.image)
+    .map((category) => ({
+      label: category.name,
+      img: getOverride("category", category.slug) || category.image,
+    }));
+  const ringItems = [...categoryItems, ...extraRingImages].slice(0, MAX_RING_ITEMS);
 
   useEffect(() => {
     const el = ringRef.current;
