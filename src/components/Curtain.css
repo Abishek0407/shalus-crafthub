@@ -20,7 +20,7 @@
   top: 0;
   bottom: 0;
   width: 50%;
-  background: radial-gradient(120% 140% at 50% 20%, #f6f4f3 0%, #f1eded 45%, #ede9e9 100%);
+  background: radial-gradient(120% 140% at 50% 20%, #f6f4f3 0%, #d74e4e 45%, #ede9e9 100%);
   cursor: pointer;
   transform-style: preserve-3d;
 }
