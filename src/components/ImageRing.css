@@ -13,7 +13,7 @@
 }
 
 .ring {
-  --width: 110px;
+  --width: 130px;
   --img-translate-x: 175%;
   position: relative;
   width: var(--width);

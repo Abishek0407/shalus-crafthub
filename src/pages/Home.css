@@ -82,9 +82,7 @@
 }
 .hero h1 em { font-style: italic; color: #6B7A6E; }
 .hero p { color: #5a564f; font-size: 16px; line-height: 1.65; margin: 0 0 30px; }
-.hero-actions { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
-
-.btn-primary, .btn-ghost {
+.btn-primary {
   font-family: 'Jost', sans-serif;
   font-size: 14px;
   padding: 13px 26px;
@@ -95,8 +93,6 @@
 }
 .btn-primary { background: #6B7A6E; color: #FBF4EF; }
 .btn-primary:hover { background: #59685c; }
-.btn-ghost { border: 1px solid #2E2B26; color: #2E2B26; }
-.btn-ghost:hover { background: #2E2B26; color: #FBF4EF; }
 
 .ring-section { position: relative; z-index: 1; text-align: center; padding: 20px 24px 10px; }
 .ring-section h2 {

@@ -1,5 +1,4 @@
 import { useEffect, useRef, useState, useCallback } from "react";
-import { Link } from "react-router-dom";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Curtain from "../components/Curtain";
@@ -86,10 +85,6 @@ export default function Home() {
             and ends up in someone's home — resin keepsakes, hand castings,
             string art, and more, made to order.
           </p>
-          <div className="hero-actions reveal-up" style={{ "--delay": "0.24s" }}>
-            <Link to="/shop" className="btn-primary">Explore the shop</Link>
-            <a href={whatsappUrl} target="_blank" rel="noreferrer" className="btn-ghost">Request a custom piece</a>
-          </div>
         </div>
       </section>
 
