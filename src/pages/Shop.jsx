@@ -27,7 +27,7 @@ export default function Shop() {
             opacity: 1,
             duration: 0.7,
             ease: "power3.out",
-            delay: parseFloat(el.style.getPropertyValue("--delay")) || 0,
+            delay: Number.parseFloat(el.style.getPropertyValue("--delay")) || 0,
             scrollTrigger: { trigger: el, start: "top 90%" }
           }
         );
